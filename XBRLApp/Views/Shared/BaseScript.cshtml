@@ -1,0 +1,27 @@
+﻿<!-- basic scripts -->
+<!--[if !IE]> -->
+<script type="text/javascript">
+			window.jQuery || document.write("<script src='@Url.Content("~/Content/assets/js/jquery.min.js")'>"+"<"+"/script>");
+</script>
+@Scripts.Render("~/bundles/unobtrusive")
+    @Scripts.Render("~/bundles/jqueryval")
+
+<!-- <![endif]-->
+<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='~/Content/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='@Url.Content("~/Content/assets/js/jquery.mobile.custom.min.js")'>"+"<"+"/script>");
+</script>
+<script src="~/Content/assets/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="~/Content/assets/js/date-time/bootstrap-datepicker.min.js"></script>
+<script src="~/Content/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="~/Content/assets/js/jqGrid/i18n/grid.locale-en.js"></script>
+
+<!-- ace scripts -->
+<script src="~/Content/assets/js/ace-elements.min.js"></script>
+<script src="~/Content/assets/js/ace.min.js"></script>

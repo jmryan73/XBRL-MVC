@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E05E0048-EE6A-446C-AEA3-40D656DD896C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XBRLApp.DAL</RootNamespace>
+    <AssemblyName>XBRLApp.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllETLProgress.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrailDetail.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrailHeader.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrailPageAccess.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DailyProcessStatus.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailRecipients.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSettings.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplate.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ETLProcessLogger.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ETLProcessLoggerDetail.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FileTaxoUpload.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormStatus.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateXbrlInstanceMonitor.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LBUSYRForm01XBRL_TI.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LBUSYRForm02XBRL_TI.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LBUSYRForm2AXBRL_TI.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LBUSYRForm2CXBRL_TI.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LBUSYRGabungan01XBRL_TI.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LBUSYRGabungan02XBRL_TI.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemoryUtilize.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsApprovalDetail.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsApprovalHeader.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsBankCode.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsBranch.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsDefaultMenuValue.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsExcludeFileApproval.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsFileApproval.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsFileSecurity.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsGroupApproval.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsGroupMenu.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsHistoryPassword.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsImpersonateCredential.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsMenu.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsUser.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsXbrlBaseFileName.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsXbrlParameter.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PageIndex.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParserTable.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessDownloadXbrl.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicesTaskChecker.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesTaskCheckerStatus.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetUnMappedFormForm_Result.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_IncludeFiles_Result.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempTableHistoryLog.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempTableManualCorrection.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Temp_ManualProcessPageIndex.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEMP_TFINSTANCE.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnMappedForm.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UploadTaxoProgress.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateAllTechnicalValidation.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_AuditTrailHeader.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_AuditTrailPageAccess.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form03.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form09.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form10.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form11.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form12.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form13.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form14.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form15.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form16.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form17.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form18.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form19.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form20.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form21.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form22.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form23.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form24.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form25.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form26.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form27.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form28.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form29.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form30.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form31.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form32.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form33.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form34.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form35.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form36.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form37.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form38.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form39.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form40.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form41.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form42.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form43.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form44.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form45.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form46.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form47.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form48.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form49.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form50.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form51.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form52.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form53.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Form54.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak09.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak10.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormAnak12.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormGabungan03.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormGabungan04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormGabungan05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormGabungan06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormGabungan07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_FormGabungan08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_UploadXml.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_ViewServicesAndTaskManagerParameter.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_XbrlScheduler.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebServicesLDAP.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XBRLDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XBRLDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XBRLDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XBRLDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XBRLDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="XbrlInstanceManagement.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XbrlOnProgressManualValidationThread.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XbrlOnProgressSemiAutoValidationThread.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XbrlOnProgressValidationThread.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XbrlScheduler.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XbrlSchedulerMaster.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_AllBase.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Base.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_BusinessValidation.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_BusinessValidationTemp.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_BusinessValidation_10072013.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_ELEMENT.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_ELEMENTbase.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_ELEMENTtypes.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FileDetail.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FilePath.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FileWatcher.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form01.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form02.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form03.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form09.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form10.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form11.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form12.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form13.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form14.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form15.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form16.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form17.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form18.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form19.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form20.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form21.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form22.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form23.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form24.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form25.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form26.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form27.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form28.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form29.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form2A.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form2C.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form30.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form31.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form32.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form33.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form34.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form35.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form36.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form37.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form38.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form39.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form40.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form41.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form42.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form44.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form45.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form46.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form47.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form48.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form49.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form50.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form51.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form52.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form53.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Form54.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak09.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak10.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak11.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormAnak12.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan01.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan02.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan03.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormGabungan08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA09.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA10.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA11.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLA12.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLG03.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLG04.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLG05.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLG06.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLG07.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_FormLG08.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Generated.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_History_Form01.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_History_Form13.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_LinkagesForm.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_Map.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_NodeLevel.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_ParserTable.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_RegConvertDb.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_SelectedTableForm.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_SysCounter.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_SysDefault.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_SysProfile.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_TableForm.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_TaxoVersion.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xbrl_UploadXml.cs">
+      <DependentUpon>XBRLDataModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="XBRLDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>XBRLDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="XBRLDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>XBRLDataModel.edmx</DependentUpon>
+      <LastGenOutput>XBRLDataModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="XBRLDataModel.edmx.diagram">
+      <DependentUpon>XBRLDataModel.edmx</DependentUpon>
+    </None>
+    <None Include="XBRLDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>XBRLDataModel.edmx</DependentUpon>
+      <LastGenOutput>XBRLDataModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
