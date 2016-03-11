@@ -9,7 +9,7 @@
             { key: false, name: 'parent', index: 'parent', editable: true },
             { key: false, name: 'child', index: 'child', editable: true },
             { key: false, name: 'Prefix', index: 'Prefix', editable: true /*, formatter: 'date', formatoptions: { newformat: 'd/m/Y' } */},
-            { key: false, name: 'Description', index: 'Description', editable: true /*, edittype: 'select', editoptions: { value: { 'L': 'Low', 'M': 'Medium', 'H': 'High' } } */ },
+            { key: false, name: 'Description', index: 'Description',width: 500, editable: true /*, edittype: 'select', editoptions: { value: { 'L': 'Low', 'M': 'Medium', 'H': 'High' } } */ },
             { key: false, name: 'Sandi', index: 'Sandi', editable: true /*, edittype: 'select', editoptions: { value: { 'A': 'Active', 'I': 'InActive' } } */ },
             { key: false, name: 'path', index: 'path', editable: true },
         ],
@@ -30,7 +30,16 @@
             Id: "0"
         },
         autowidth: true,
-        multiselect: false
+        multiselect: false,
+        loadComplete: function () {
+            var table = this;
+            setTimeout(function () {
+                //styleCheckbox(table);
+                //updateActionIcons(table);
+                updatePagerIcons(table);
+                enableTooltips(table);
+            }, 0);
+        },
     }).navGrid('#pager', {
         edit: true,
         editicon: 'ace-icon fa fa-pencil blue',
@@ -85,3 +94,25 @@
             }
         });
 });
+
+//replace icons with FontAwesome icons like above
+function updatePagerIcons(table) {
+    var replacement =
+    {
+        'ui-icon-seek-first': 'ace-icon fa fa-angle-double-left bigger-140',
+        'ui-icon-seek-prev': 'ace-icon fa fa-angle-left bigger-140',
+        'ui-icon-seek-next': 'ace-icon fa fa-angle-right bigger-140',
+        'ui-icon-seek-end': 'ace-icon fa fa-angle-double-right bigger-140'
+    };
+    $('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function () {
+        var icon = $(this);
+        var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+
+        if ($class in replacement) icon.attr('class', 'ui-icon ' + replacement[$class]);
+    })
+}
+
+function enableTooltips(table) {
+    $('.navtable .ui-pg-button').tooltip({ container: 'body' });
+    $(table).find('.ui-pg-div').tooltip({ container: 'body' });
+}
