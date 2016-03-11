@@ -889,6 +889,7 @@
     <Content Include="Views\Shared\BaseScript.cshtml" />
     <Content Include="Views\Shared\HeaderNavigation.cshtml" />
     <Content Include="Views\FileSecurity\Index.cshtml" />
+    <Content Include="Views\FileSecurity\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
