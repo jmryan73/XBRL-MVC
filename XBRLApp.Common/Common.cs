@@ -4,11 +4,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Data;
+//using System.Web.UI.WebControls;
 
 public class Common
 {
     public static string StrConn =
-        System.Configuration.ConfigurationManager.ConnectionStrings["LBUSConnection"].ToString();
+        System.Configuration.ConfigurationManager.ConnectionStrings["XbrlDbCsEntities"].ToString();
 
     public static int SQLCommandTimeout =
         Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings.Get("SqlCommandTimeOut"));
@@ -318,7 +319,7 @@ public class Common
     /// 	[Ery MN]	28/01/2013	Created
     /// </history>
     /// -----------------------------------------------------------------------------
-    public static string SessionUserID
+    /* public static string SessionUserID
     {
         get
         {
@@ -353,9 +354,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    } */
 
-    public static string SessionUserName
+    /* public static string SessionUserName
     {
         get
         {
@@ -391,7 +392,7 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    } */
 
     /// <summary>
     /// Session Pk User Login Id 
@@ -399,7 +400,7 @@ public class Common
     /// <value></value>
     /// <returns></returns>
     /// <remarks></remarks>
-    public static int? SessionPkUserId
+   /* public static int? SessionPkUserId
     {
         get
         {
@@ -436,9 +437,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    } */
 
-    public static DateTime? SessionLoginDate
+   /* public static DateTime? SessionLoginDate
     {
         get
         {
@@ -475,9 +476,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    } */
 
-    public static int? SessionFKMsGroupMenuId
+    /* public static int? SessionFKMsGroupMenuId
     {
         get
         {
@@ -514,9 +515,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    }  */
 
-    public static string SessionRoleName
+    /* public static string SessionRoleName
     {
         get
         {
@@ -551,9 +552,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    }  */
 
-    public static int? SessionCheckerMakerLevel
+    /* public static int? SessionCheckerMakerLevel
     {
         get
         {
@@ -590,9 +591,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    }  */
 
-    public static int? SessionPKGroupApproval
+    /* public static int? SessionPKGroupApproval
     {
         get
         {
@@ -629,9 +630,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    }  */
 
-    public static string SessionBranchCode
+    /* public static string SessionBranchCode
     {
         get
         {
@@ -666,9 +667,9 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    } */
 
-    public static string SessionIntendedPage
+    /* public static string SessionIntendedPage
     {
         get
         {
@@ -703,7 +704,7 @@ public class Common
                 ObjWebPage.Dispose();
             }
         }
-    }
+    }  */
 
     public static bool IsDateValid(string strFormat, string strTanggal)
     {
@@ -783,7 +784,7 @@ public class Common
     }
 
     //buat change sign pas sorting
-    public static void ChangeHeader(GridViewRow headerRow, string CurrentSortExpression, SortDirection GridViewSortDirection)
+    /* public static void ChangeHeader(GridViewRow headerRow, string CurrentSortExpression, SortDirection GridViewSortDirection)
     {
         for (int i = 0; i < headerRow.Cells.Count; i++)
         {
@@ -807,7 +808,7 @@ public class Common
                 }
             }
         }
-    }
+    } */
 
 
     /// <summary>
@@ -862,7 +863,7 @@ public class Common
     /// 	[Ery MN]	05/06/2006	Created
     /// </history>
     /// -----------------------------------------------------------------------------
-    public static Int16 IndexSort(System.Web.UI.WebControls.DataGrid dgVictim, string sSort)
+   /* public static Int16 IndexSort(System.Web.UI.WebControls.DataGrid dgVictim, string sSort)
     {
         for (Int16 i = 0; i <= Convert.ToInt16(dgVictim.Columns.Count - 1); i++)
         {
@@ -872,9 +873,9 @@ public class Common
             }
         }
         return -1;
-    }
+    } */
 
-    public static Int16 IndexSort(System.Web.UI.WebControls.GridView dgVictim, string sSort)
+    /* public static Int16 IndexSort(System.Web.UI.WebControls.GridView dgVictim, string sSort)
     {
         for (Int16 i = 0; i <= Convert.ToInt16(dgVictim.Columns.Count - 1); i++)
         {
@@ -884,7 +885,7 @@ public class Common
             }
         }
         return -1;
-    }
+    } */
 
     #endregion
 
@@ -939,7 +940,7 @@ public class Common
     /// 	[Ery MN]	28/01/2013	Created
     /// </history>
     /// -----------------------------------------------------------------------------
-    public static void AddPostBackGoBut(System.Web.UI.Page TargetPage, System.Web.UI.WebControls.WebControl cVictim,
+    /* public static void AddPostBackGoBut(System.Web.UI.Page TargetPage, System.Web.UI.WebControls.WebControl cVictim,
                                         System.Web.UI.WebControls.WebControl cMustHave, int iCurr, Int64 iMax)
     {
         try
@@ -954,7 +955,7 @@ public class Common
         {
             throw;
         }
-    }
+    } */
 
     #endregion
 }

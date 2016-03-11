@@ -1,0 +1,69 @@
+﻿@model IEnumerable<XBRLApp.DAL.xbrl_Form01>
+
+@{
+    ViewBag.Title = "GetList";
+}
+
+<h2>GetList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.parent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.child)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prefix)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sandi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.path)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.parent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.child)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prefix)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sandi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.path)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
