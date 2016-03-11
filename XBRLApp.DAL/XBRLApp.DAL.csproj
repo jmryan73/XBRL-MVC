@@ -135,6 +135,7 @@
     <Compile Include="MsGroupApproval.cs">
       <DependentUpon>XBRLDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MsGroupApprovalDAL.cs" />
     <Compile Include="MsGroupMenu.cs">
       <DependentUpon>XBRLDataModel.tt</DependentUpon>
     </Compile>
@@ -792,14 +793,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="XBRLDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>XBRLDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="XBRLDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>XBRLDataModel.edmx</DependentUpon>
