@@ -36,11 +36,16 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\Project\XBRL-2.0.0\XBRL.Web\Bin\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -181,6 +186,7 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>XBRLDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TechnicalValidationService.cs" />
     <Compile Include="TempTableHistoryLog.cs">
       <DependentUpon>XBRLDataModel.tt</DependentUpon>
     </Compile>
@@ -816,6 +822,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XBRLApp.Common\XBRLApp.Common.csproj">
+      <Project>{99feef4f-a9bd-4334-90d3-019f8080b904}</Project>
+      <Name>XBRLApp.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

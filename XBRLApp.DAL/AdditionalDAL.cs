@@ -6,15 +6,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Web.UI.WebControls;
+//using System.Web.UI.WebControls;
+using XBRLApp.Common;
 
-namespace Ebiz.LBUS.DAL
+namespace XBRLApp.DAL
 {
     public class AdditionalDAL
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         SqlConnection conn;
-        string strConn = ConfigurationManager.ConnectionStrings["LBUSConnection"].ConnectionString;
+        string strConn = ConfigurationManager.ConnectionStrings["XbrlDbCsEntities"].ConnectionString;
 
         private void OpenConn()
         {
