@@ -269,6 +269,7 @@
     <Content Include="Content\assets\images\gallery\thumb-4.jpg" />
     <Content Include="Content\assets\images\gallery\thumb-5.jpg" />
     <Content Include="Content\assets\images\gallery\thumb-6.jpg" />
+    <Content Include="Content\assets\images\prodentio_small.png" />
     <Content Include="Content\assets\images\prudentio.png" />
     <Content Include="Content\assets\images\prudentio1.png" />
     <Content Include="Content\assets\images\sort_asc.png" />
