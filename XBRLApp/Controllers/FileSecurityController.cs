@@ -9,12 +9,12 @@ namespace XBRLApp.Controllers
 {
     public class FileSecurityController : Controller
     {
-        public MsGroupApprovalDAL service = new MsGroupApprovalDAL();
+        public MsGroupApprovalDAL serv = new MsGroupApprovalDAL();
         //
         // GET: /FileSecurity/
         public ActionResult Index()
         {
-            var model = service.GetAllData();
+            var model = serv.GetAllData();
             return View(model);
         }
 

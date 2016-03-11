@@ -1003,8 +1003,7 @@
     <Content Include="Views\Shared\BaseStyle.cshtml" />
     <Content Include="Views\Shared\BaseScript.cshtml" />
     <Content Include="Views\Shared\HeaderNavigation.cshtml" />
-    <Content Include="Views\TechnicalValidation\GetList.cshtml" />
-    <Content Include="Views\TechnicalValidation\Index.cshtml" />
+    <Content Include="Views\FileSecurity\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
