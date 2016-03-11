@@ -989,25 +989,6 @@ warning 6013: The table/view 'XbrlDbCs.dbo.TempTableValidationTechnic' does not 
           <Property Name="ID" Type="int" />
           <Property Name="Period" Type="varchar" MaxLength="50" />
           <Property Name="Sandi Bank" Type="varchar" MaxLength="50" />
-          <Property Name="Sumber Dana" Type="varchar" MaxLength="100" />
-          <Property Name="Jenis Piutang" Type="varchar" MaxLength="100" />
-          <Property Name="Kategori Portofolio" Type="varchar" MaxLength="100" />
-          <Property Name="Klasifikasi Nasabah - Hubungan dengan Bank" Type="varchar" MaxLength="100" />
-          <Property Name="Klasifikasi Nasabah - Status" Type="varchar" MaxLength="100" />
-          <Property Name="Peringkat - Nilai Peringkat" Type="varchar" MaxLength="100" />
-          <Property Name="Jenis Valuta" Type="varchar" MaxLength="100" />
-          <Property Name="Agunan / Jaminan - Jenis Agunan/Jaminan" Type="varchar" MaxLength="100" />
-          <Property Name="Agunan / Jaminan - Golongan Penerbit" Type="varchar" MaxLength="100" />
-          <Property Name="Sektor Ekonomi" Type="varchar" MaxLength="100" />
-          <Property Name="Golongan Nasabah" Type="varchar" MaxLength="100" />
-          <Property Name="Jenis Penggunaan" Type="varchar" MaxLength="100" />
-          <Property Name="Kualitas" Type="varchar" MaxLength="100" />
-          <Property Name="Peringkat - Lembaga Pemeringkat" Type="varchar" MaxLength="100" />
-          <Property Name="Agunan / Jaminan - Sifat" Type="varchar" MaxLength="100" />
-          <Property Name="Klasifikasi Nasabah - Kategori Usaha" Type="varchar" MaxLength="100" />
-          <Property Name="Lokasi" Type="varchar" MaxLength="100" />
-          <Property Name="Sifat Piutang" Type="varchar" MaxLength="100" />
-          <Property Name="Orientasi Penggunaan" Type="varchar" MaxLength="100" />
         </EntityType>-->
         <EntityType Name="UnMappedForm">
           <Key>
